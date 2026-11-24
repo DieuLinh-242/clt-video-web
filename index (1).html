@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mô phỏng định lí giới hạn trung tâm">
+  <title>Mô phỏng Định lí Giới hạn Trung tâm</title>
+  <link rel="stylesheet"
+        href="static/css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">LẬP TRÌNH PYTHON NÂNG CAO</p>
+      <h1>Định lí Giới hạn Trung tâm</h1>
+      <p>Quan sát phân phối của trung bình mẫu khi cỡ mẫu n tăng.</p>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <section class="card video-card">
+      <h2>Video mô phỏng</h2>
+      <video controls playsinline preload="metadata"
+             aria-label="Video mô phỏng định lí giới hạn trung tâm">
+        <source src="static/video/clt_simulation.mp4"
+                type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video HTML5.
+      </video>
+      <p class="caption">
+        Phân phối gốc: mũ Exp(1) (lệch phải, không chuẩn). Mỗi giai đoạn lấy
+        nhiều mẫu cỡ n, tính trung bình mẫu rồi chuẩn hoá thành Z<sub>n</sub>.
+      </p>
+    </section>
+
+    <aside class="card">
+      <h2>Cách quan sát</h2>
+      <ol>
+        <li>So sánh các kích thước mẫu n = 1, 2, 5, 10, 30, 100.</li>
+        <li>Quan sát histogram của trung bình mẫu đã chuẩn hoá.</li>
+        <li>Đánh giá xu hướng tiến về dạng hình chuông N(0, 1).</li>
+      </ol>
+    </aside>
+
+    <section class="card full">
+      <h2>Ý tưởng toán học</h2>
+      <p>
+        Giả sử X<sub>1</sub>, …, X<sub>n</sub> độc lập, cùng phân phối, có kỳ
+        vọng μ và phương sai σ<sup>2</sup> &lt; ∞. Khi n lớn:
+      </p>
+      <p class="formula">
+        Z<sub>n</sub> = (X̄<sub>n</sub> − μ) / (σ/√n) &nbsp;→&nbsp; N(0, 1)
+        &nbsp;(theo phân phối)
+      </p>
+      <p>
+        Với Exp(1): μ = 1 và σ = 1. Đường nét đứt trong video là hàm mật độ
+        của N(0, 1); cột histogram là trung bình mẫu đã chuẩn hoá.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Thực hiện bởi: Trần Nguyễn Diệu Linh — Khoa Toán - Tin, Trường ĐH Sư phạm - ĐH Đà Nẵng</p>
+    </div>
+  </footer>
+</body>
+</html>
